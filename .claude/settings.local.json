@@ -1,11 +1,7 @@
 {
   "permissions": {
     "allow": [
-      "*",
-      "Bash(find:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git push:*)"
+      "Bash(julia:*)"
     ],
     "deny": [],
     "ask": []
