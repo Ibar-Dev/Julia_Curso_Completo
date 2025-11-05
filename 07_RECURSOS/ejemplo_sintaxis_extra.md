@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ejemplos de sintaxis especial en Julia
 
 ## Uso de begin...end
@@ -42,7 +41,6 @@ println(v...)
 ```
 
 Estos ejemplos te ayudarán a dominar la sintaxis única y poderosa de Julia.
-=======
 # Ejemplos de sintaxis especial en Julia
 
 ## Uso de begin...end
@@ -86,4 +84,3 @@ println(v...)
 ```
 
 Estos ejemplos te ayudarán a dominar la sintaxis única y poderosa de Julia.
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

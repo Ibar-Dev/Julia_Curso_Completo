@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ### Pluto.jl notebook: Mini-proyecto de análisis de datos ###
 
 using DataFrames, CSV, Plots, Statistics, Markdown
@@ -51,7 +50,6 @@ md"""
 md"""
 Puedes instalar MLJ.jl y probar modelos de regresión o clasificación sobre tus datos.
 """
-=======
 ### Pluto.jl notebook: Mini-proyecto de análisis de datos ###
 
 using DataFrames, CSV, Plots, Statistics, Markdown
@@ -104,4 +102,3 @@ md"""
 md"""
 Puedes instalar MLJ.jl y probar modelos de regresión o clasificación sobre tus datos.
 """
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

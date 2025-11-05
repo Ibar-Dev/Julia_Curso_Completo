@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Errores frecuentes en Julia y cómo solucionarlos
 
 - **UndefVarError**: Variable no definida. Solución: declara la variable antes de usarla.
@@ -10,7 +9,6 @@
 - **PkgError**: Problemas al instalar paquetes. Solución: actualiza el registro y verifica la conexión a internet.
 - **Ambigüedad en métodos**: Métodos con firmas similares. Solución: especializa los métodos o usa tipos más específicos.
 - **Problemas de performance**: Código lento por variables globales o tipos inestables. Solución: usa funciones y tipado explícito.
-=======
 # Errores frecuentes en Julia y cómo solucionarlos
 
 - **UndefVarError**: Variable no definida. Solución: declara la variable antes de usarla.
@@ -22,4 +20,3 @@
 - **PkgError**: Problemas al instalar paquetes. Solución: actualiza el registro y verifica la conexión a internet.
 - **Ambigüedad en métodos**: Métodos con firmas similares. Solución: especializa los métodos o usa tipos más específicos.
 - **Problemas de performance**: Código lento por variables globales o tipos inestables. Solución: usa funciones y tipado explícito.
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ETL de JSON en Julia
 
 using JSON
@@ -14,7 +13,6 @@ nuevo = Dict("nombre" => "Ana", "edad" => 28)
 open("nuevo.json", "w") do f
     write(f, JSON.json(nuevo))
 end
-=======
 # ETL de JSON en Julia
 
 using JSON
@@ -30,4 +28,3 @@ nuevo = Dict("nombre" => "Ana", "edad" => 28)
 open("nuevo.json", "w") do f
     write(f, JSON.json(nuevo))
 end
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

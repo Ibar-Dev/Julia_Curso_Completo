@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Glosario de términos Julia
 
 - **REPL**: Entorno interactivo de Julia para ejecutar código línea por línea.
@@ -14,7 +13,6 @@
 - **Scope**: Ámbito de visibilidad de variables y funciones.
 - **Broadcasting**: Aplicación de operaciones elemento a elemento en arrays.
 - **Interoperabilidad**: Capacidad de Julia para interactuar con otros lenguajes.
-=======
 # Glosario de términos Julia
 
 - **REPL**: Entorno interactivo de Julia para ejecutar código línea por línea.
@@ -30,4 +28,3 @@
 - **Scope**: Ámbito de visibilidad de variables y funciones.
 - **Broadcasting**: Aplicación de operaciones elemento a elemento en arrays.
 - **Interoperabilidad**: Capacidad de Julia para interactuar con otros lenguajes.
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

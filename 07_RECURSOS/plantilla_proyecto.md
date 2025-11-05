@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Plantilla para proyectos en Julia
 
 ## Estructura recomendada
@@ -26,7 +25,6 @@ Test = "eaa6bffe-5b3e-5381-b7d9-7c1b1f5f0a2b"
 ```
 
 ¡Usa esta plantilla para iniciar tus propios proyectos y mantener buenas prácticas desde el principio!
-=======
 # Plantilla para proyectos en Julia
 
 ## Estructura recomendada
@@ -54,4 +52,3 @@ Test = "eaa6bffe-5b3e-5381-b7d9-7c1b1f5f0a2b"
 ```
 
 ¡Usa esta plantilla para iniciar tus propios proyectos y mantener buenas prácticas desde el principio!
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Operaciones de Módulo en Julia
 # Funciones auxiliares para trabajar con operaciones modulares
 
@@ -146,7 +145,6 @@ function congruencia_lineal(a::Integer, b::Integer, m::Integer)
 end
 
 end # module OperacionesModulo
-=======
 # Operaciones de Módulo en Julia
 # Funciones auxiliares para trabajar con operaciones modulares
 
@@ -294,4 +292,3 @@ function congruencia_lineal(a::Integer, b::Integer, m::Integer)
 end
 
 end # module OperacionesModulo
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

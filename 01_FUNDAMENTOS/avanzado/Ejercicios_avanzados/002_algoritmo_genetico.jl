@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Algoritmo genético simple
 
 # Este ejemplo muestra la estructura básica de un algoritmo genético
@@ -15,7 +14,6 @@ for generacion in 1:20
     # Mutación simple
     poblacion = poblacion .+ rand(-2:2, 10)
 end
-=======
 # Algoritmo genético simple
 
 # Este ejemplo muestra la estructura básica de un algoritmo genético
@@ -32,4 +30,3 @@ for generacion in 1:20
     # Mutación simple
     poblacion = poblacion .+ rand(-2:2, 10)
 end
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

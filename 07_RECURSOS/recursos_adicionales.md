@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Recursos adicionales para aprender Julia
 
 ## Documentación y tutoriales
@@ -25,7 +24,6 @@
 - No dudes en pedir ayuda o compartir tus dudas
 
 ¡El aprendizaje de Julia es progresivo y la comunidad es muy activa y colaborativa!
-=======
 # Recursos adicionales para aprender Julia
 
 ## Documentación y tutoriales
@@ -52,4 +50,3 @@
 - No dudes en pedir ayuda o compartir tus dudas
 
 ¡El aprendizaje de Julia es progresivo y la comunidad es muy activa y colaborativa!
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ejemplo temático: Uso de map() y sintaxis do
 
 # Usando función anónima
@@ -21,7 +20,6 @@ resultados = map([1, 2, 3, 4]) do x
     end
 end
 println("Resultados con lógica condicional: $resultados")
-=======
 # Ejemplo temático: Uso de map() y sintaxis do
 
 # Usando función anónima
@@ -44,4 +42,3 @@ resultados = map([1, 2, 3, 4]) do x
     end
 end
 println("Resultados con lógica condicional: $resultados")
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

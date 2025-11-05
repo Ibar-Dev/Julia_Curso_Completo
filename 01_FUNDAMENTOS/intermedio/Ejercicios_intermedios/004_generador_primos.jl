@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Generador de números primos hasta un límite
 
 function primos_hasta(n)
@@ -19,7 +18,6 @@ function primos_hasta(n)
 end
 
 println("Primos hasta 30: $(primos_hasta(30))")
-=======
 # Generador de números primos hasta un límite
 
 function primos_hasta(n)
@@ -40,4 +38,3 @@ function primos_hasta(n)
 end
 
 println("Primos hasta 30: $(primos_hasta(30))")
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

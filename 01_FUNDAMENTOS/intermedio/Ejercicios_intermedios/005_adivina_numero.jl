@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Juego: Adivina el número
 
 function adivina_numero()
@@ -21,7 +20,6 @@ function adivina_numero()
 end
 
 # adivina_numero() # Descomenta para jugar en REPL
-=======
 # Juego: Adivina el número
 
 function adivina_numero()
@@ -44,4 +42,3 @@ function adivina_numero()
 end
 
 # adivina_numero() # Descomenta para jugar en REPL
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

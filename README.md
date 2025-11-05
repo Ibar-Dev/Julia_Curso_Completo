@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Julia_Curso_Completo 🚀
 
 > Aprende Julia desde cero hasta nivel profesional con ejercicios, notebooks y proyectos reales. Todo organizado y visualmente atractivo.
@@ -41,7 +40,6 @@
 
 
 > **¡Disfruta aprendiendo Julia y lleva tus habilidades al siguiente nivel!** 🎉
-=======
 # Julia_Curso_Completo 🚀
 
 > Aprende Julia desde cero hasta nivel profesional con ejercicios, notebooks y proyectos reales. Todo organizado y visualmente atractivo.
@@ -101,4 +99,3 @@
 ---
 
 > **¡Disfruta aprendiendo Julia y lleva tus habilidades al siguiente nivel!** 🎉
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

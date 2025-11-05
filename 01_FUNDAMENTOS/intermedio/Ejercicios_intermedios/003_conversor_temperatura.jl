@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Conversor de temperatura
 
 function celsius_a_fahrenheit(c)
@@ -11,7 +10,6 @@ end
 
 println("25°C a Fahrenheit: $(celsius_a_fahrenheit(25))")
 println("77°F a Celsius: $(fahrenheit_a_celsius(77))")
-=======
 # Conversor de temperatura
 
 function celsius_a_fahrenheit(c)
@@ -24,4 +22,3 @@ end
 
 println("25°C a Fahrenheit: $(celsius_a_fahrenheit(25))")
 println("77°F a Celsius: $(fahrenheit_a_celsius(77))")
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

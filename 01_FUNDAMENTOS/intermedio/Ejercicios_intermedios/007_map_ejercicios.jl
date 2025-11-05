@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ejercicios sobre map() y sintaxis do
 
 # 1. Eleva al cubo cada elemento de un array usando map y función anónima
@@ -18,7 +17,6 @@ sumados = map(numeros) do n
     n + 10
 end
 println("Sumados: $sumados")
-=======
 # Ejercicios sobre map() y sintaxis do
 
 # 1. Eleva al cubo cada elemento de un array usando map y función anónima
@@ -38,4 +36,3 @@ sumados = map(numeros) do n
     n + 10
 end
 println("Sumados: $sumados")
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

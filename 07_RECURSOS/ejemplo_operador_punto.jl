@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ejemplo temático: Operador punto . para operaciones elementwise
 
 v = [1, 2, 3, 4]
@@ -11,7 +10,6 @@ println("Suma: $suma")
 f = x -> x^3
 cubos = f.(v)
 println("Cubos: $cubos")
-=======
 # Ejemplo temático: Operador punto . para operaciones elementwise
 
 v = [1, 2, 3, 4]
@@ -24,4 +22,3 @@ println("Suma: $suma")
 f = x -> x^3
 cubos = f.(v)
 println("Cubos: $cubos")
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Patrones comunes en Julia
 
 - **Uso de funciones puras**: Evita efectos secundarios, facilita pruebas y depuración.
@@ -10,7 +9,6 @@
 - **Uso de paquetes externos**: Instala y utiliza paquetes para ampliar funcionalidades.
 - **Metaprogramación con macros**: Automatiza tareas repetitivas y genera código dinámico.
 - **Testing con Test.jl**: Escribe pruebas automáticas para asegurar calidad.
-=======
 # Patrones comunes en Julia
 
 - **Uso de funciones puras**: Evita efectos secundarios, facilita pruebas y depuración.
@@ -22,4 +20,3 @@
 - **Uso de paquetes externos**: Instala y utiliza paquetes para ampliar funcionalidades.
 - **Metaprogramación con macros**: Automatiza tareas repetitivas y genera código dinámico.
 - **Testing con Test.jl**: Escribe pruebas automáticas para asegurar calidad.
->>>>>>> 1ed4dc5a19737d2c287485414e56dac4f867a095
