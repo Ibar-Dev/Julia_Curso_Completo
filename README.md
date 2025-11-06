@@ -158,46 +158,148 @@ julia --project=. %*
 
 ### 🐍 Paso 5: ¿Por qué Conda/PythonCall?
 
-#### ¿Qué es Conda?
-**Conda** es un gestor de paquetes y entornos para Python (y otros lenguajes). Es como `pip` pero más potente.
+#### ¿Qué es CondaPkg?
 
-#### ¿Por qué se usa en este curso?
+**CondaPkg** es el **puente** entre Julia y Conda. Es un paquete Julia que:
+
+- 🌉 **Actúa como traductor:** Convierte necesidades de paquetes Julia a comandos Conda
+- 📦 **Gestia automáticamente:** Instala Python y paquetes Python sin que tengas que tocar Conda directamente
+- 🔒 **Crea aislamiento:** Cada proyecto Julia tiene su propio entorno Python completamente separado
+
+#### Visualización del Flujo Completo:
 
 ```mermaid
-graph LR
-    A[Julia] --> B[PythonCall]
-    B --> C[CondaPkg]
+graph TD
+    A[Julia] --> B[PythonCall.jl]
+    B --> C[CondaPkg.jl]
     C --> D[Conda]
-    D --> E[Python]
+    D --> E[Python + Librerías]
+
+    C --> F[.CondaPkg/]
+    F --> G[pixi.toml]
+    F --> H[pixi.lock]
+
+    I[Tú] --> J[julia --project=.]
+    J --> A
 
     style A fill:#9b59b6,color:#fff
     style B fill:#3498db,color:#fff
     style C fill:#e74c3c,color:#fff
     style D fill:#2ecc71,color:#fff
     style E fill:#f39c12,color:#fff
+    style F fill:#e67e22,color:#fff
+    style G fill:#95a5a6,color:#fff
+    style H fill:#95a5a6,color:#fff
 ```
 
-1. **PythonCall necesita Python:** No usa tu Python del sistema
-2. **Aislamiento completo:** Cada proyecto Julia puede tener su propio Python
-3. **Versiones controladas:** Conda asegura que las librerías Python sean compatibles
-4. **Sin conflictos:** No interfiere con otros proyectos Python en tu sistema
+#### ¿Qué hace CondaPkg específicamente?
+
+1. **🔍 Análisis de dependencias:**
+   ```julia
+   # Cuando haces:
+   using PythonCall
+
+   # CondaPkg detecta que necesita:
+   # - Python intérprete
+   # - Librerías específicas que PythonCall requiere
+   ```
+
+2. **📝 Generación de configuración:**
+   ```toml
+   # CondaPkg crea automáticamente .CondaPkg/pixi.toml:
+   [dependencies.python]
+   channel = "conda-forge"
+   version = ">=3.9,<4"
+   ```
+
+3. **🚀 Ejecución de Conda:**
+   ```bash
+   # CondaPkg ejecuta automáticamente (tú no ves esto):
+   conda create -n .CondaPkg python=3.11
+   conda install -n .CondaPkg numpy pandas matplotlib
+   ```
+
+4. **🔗 Configuración del puente:**
+   ```julia
+   # CondaPkg le dice a PythonCall dónde encontrar el Python:
+   ENV["PYTHON"] = "/ruta/a/.CondaPkg/envs/default/bin/python"
+   ```
+
+#### ¿Por qué no usar directamente el Python de mi sistema?
+
+| Python del Sistema | CondaPkg + PythonCall |
+|-------------------|------------------------|
+| ❌ Puede ser cualquier versión | ✅ Versión controlada y compatible |
+| ❌ Librerías pueden faltar | ✅ Todas las librerías necesarias |
+| ❌ Conflictos entre proyectos | ✅ Aislamiento completo por proyecto |
+| ❌ Diferente en Windows/Mac/Linux | ✅ Comportamiento idéntico en todos lados |
+| ❌ Requiere instalación manual | ✅ Automático y transparente |
+
+#### ¿Qué es Conda entonces?
+
+**Conda** es el motor subyacente que:
+- 🐍 **Instala Python:** Descarga el intérprete Python
+- 📚 **Gestiona paquetes Python:** numpy, pandas, matplotlib, etc.
+- 🏗️ **Crea entornos virtuales:** Aísla las dependencias
+- 🔧 **Resuelve conflictos:** Encuentra versiones compatibles
+
+**CondaPkg es como el "chofer" que maneja el "carro" (Conda) por ti.**
 
 #### ¿Qué pasa la primera vez?
+
 ```bash
 # Cuando ejecutas por primera vez:
 julia --project=. -e "using PythonCall"
 
-# Verás algo como:
-# CondaPkg Resolving changes
-# CondaPkg Installing packages
-# CondaPkg Found dependencies
+# VERÁS ESTO (es normal):
+CondaPkg Resolving changes...     # 🔍 Analizando qué necesita
+CondaPkg Installing packages...   # 📦 Descargando Python y librerías
+CondaPkg Found dependencies...   # ✅ Todo listo para usar
+
+# PROCESO INTERNO (automático):
+# 1. Crear carpeta .CondaPkg/
+# 2. Generar pixi.toml con configuración
+# 3. Descargar Python (≈50MB)
+# 4. Instalar librerías necesarias
+# 5. Configurar puente Julia-Python
 ```
 
-**Esto es normal y solo pasa una vez.** CondaPkg está:
-- 🔍 Analizando qué necesita PythonCall
-- 📦 Descargando Python y librerías necesarias
-- 🏗️ Construyendo un entorno Python aislado
-- ⚙️ Configurando la integración Julia-Python
+**¿Cuánto tiempo tarda?**
+- Primera vez: 2-10 minutos (depende de tu internet)
+- Siguientes veces: 5-10 segundos (solo verificar)
+
+#### ¿Dónde se guarda todo?
+
+```
+tu_carpeta/
+├── .CondaPkg/              # ← Aquí está todo lo de Python
+│   ├── pixi.toml          # Configuración del entorno
+│   ├── pixi.lock          # Versiones exactas (como Manifest.toml)
+│   └── envs/              # Python instalado (~200MB)
+│       └── default/
+│           ├── bin/python
+│           └── lib/python3.11/
+├── Project.toml           # ← Paquetes Julia
+├── Manifest.toml          # ← Versiones Julia exactas
+└── tus_archivos.jl
+```
+
+#### ¿Puedo usar librerías Python adicionales?
+
+¡Sí! CondaPkg las detecta automáticamente:
+
+```julia
+# En tu código Julia:
+using PythonCall
+pd = pyimport("pandas")      # ← CondaPkg instalará pandas automáticamente
+np = pyimport("numpy")       # ← CondaPkg instalará numpy
+plt = pyimport("matplotlib") # ← CondaPkg instalará matplotlib
+
+# CondaPkg hace:
+# 1. "Oh, necesita pandas"
+# 2. "Ejecutando: conda install pandas"
+# 3. "Listo, pandas está disponible"
+```
 
 ### 📦 Dependencias del Proyecto
 
