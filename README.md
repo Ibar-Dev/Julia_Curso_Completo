@@ -170,26 +170,26 @@ julia --project=. %*
 
 ```mermaid
 graph TD
-    A[Julia] --> B[PythonCall.jl]
-    B --> C[CondaPkg.jl]
-    C --> D[Conda]
-    D --> E[Python + Librerías]
+   A[Julia] --> B[PythonCall.jl]
+   B --> C[CondaPkg.jl]
+   C --> D[Conda]
+   D --> E[Python + Librerías]
 
-    C --> F[.CondaPkg/]
-    F --> G[pixi.toml]
-    F --> H[pixi.lock]
+   C --> F[.CondaPkg/]
+   F --> G[pixi.toml]
+   F --> H[pixi.lock]
 
-    I[Tú] --> J[julia --project=.]
-    J --> A
+   I[Tú] --> J[julia --project=.]
+   J --> A
 
-    style A fill:#9b59b6,color:#fff
-    style B fill:#3498db,color:#fff
-    style C fill:#e74c3c,color:#fff
-    style D fill:#2ecc71,color:#fff
-    style E fill:#f39c12,color:#fff
-    style F fill:#e67e22,color:#fff
-    style G fill:#95a5a6,color:#fff
-    style H fill:#95a5a6,color:#fff
+   style A fill:#9b59b6,color:#fff
+   style B fill:#3498db,color:#fff
+   style C fill:#e74c3c,color:#fff
+   style D fill:#2ecc71,color:#fff
+   style E fill:#f39c12,color:#fff
+   style F fill:#e67e22,color:#fff
+   style G fill:#95a5a6,color:#fff
+   style H fill:#95a5a6,color:#fff
 ```
 
 #### ¿Qué hace CondaPkg específicamente?
